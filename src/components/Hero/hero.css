@@ -1,0 +1,21 @@
+/* The hero image */
+.hero-image {
+    /* The image used */
+    background-image: url("./images/Hero1.jpg");
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+
+
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    color: white;
+}
