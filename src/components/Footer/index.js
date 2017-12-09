@@ -15,15 +15,17 @@ const theme = createMuiTheme({
 const styles = theme => ({
   root: {
     paddingTop: '2rem',
-    paddingBottom: '2rem',
+    paddingBottom: '1rem',
     background: theme.palette.shades.dark.background.default,
   },
   container: {
-    width: '90%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    width: '100%',
     marginTop: theme.spacing.unit * 2,
     marginBottom: theme.spacing.unit * 2,
+  },
+  item: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   icon: {
     margin: theme.spacing.unit,
@@ -37,9 +39,9 @@ class Footer extends Component {
   render(){
     return(
       <MuiThemeProvider theme={theme}>
-        <Grid container className={this.props.classes.root}>
-          <Grid item xs={12}>
-            <Grid container className={this.props.classes.container}>
+        <Grid container spacing={0} className={this.props.classes.root}>
+          <Grid item xs={12} className={this.props.classes.item}>
+            <Grid container spacing={0} className={this.props.classes.container}>
               <Grid item xs={12} md={6} style={{textAlign: "center"}}>
                 <LogoIcon className={this.props.classes.icon} />
               </Grid>
@@ -55,7 +57,7 @@ class Footer extends Component {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid container className={this.props.classes.root}>
+            <Grid container spacing={0} className={this.props.classes.root}>
               <Grid item xs={12} style={{ textAlign: 'center' }}>
                 <Typography type = "caption">
                   Hecho con ♥ para tus perros

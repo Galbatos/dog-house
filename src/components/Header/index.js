@@ -13,9 +13,6 @@ import Logo from '../Logo/';
 import MenuA from '../MenuA/';
 
 const styles = theme => ({
-  root: {
-    width: '100%',
-  },
   flex: {
     flex: 1,
   },
@@ -44,35 +41,33 @@ class Header extends Component {
     const { classes } = this.props;
 
     return (
-        <div className = {classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <Hidden mdUp>
-              <MenuA />
-              <Typography color="inherit" className={classes.flex} align="right">
-                <Logo />
-              </Typography>
-            </Hidden>
-            <Hidden smDown>
-              <Typography type="title" color="inherit" className={classes.flex}>
-                <Logo />
-              </Typography>
-              <Button className={classes.button} color="contrast">
-                <AccessibilityIcon className={classes.leftIcon} />
-                Ser Anfitrion
-              </Button>
-              <Button className={classes.button} color="contrast">
-                <SearchIcon className={classes.leftIcon} />
-                Encontrar Cuidador
-              </Button>
-              <Button className={classes.button} color="contrast">
-                <AccountCircle className={classes.leftIcon} />
-                Ingresar
-              </Button>
-            </Hidden>
-          </Toolbar>
-        </AppBar>
-        </div>
+          <AppBar position="static">
+            <Toolbar>
+              <Hidden mdUp>
+                <MenuA />
+                <Typography color="inherit" className={classes.flex} align="right">
+                  <Logo />
+                </Typography>
+              </Hidden>
+              <Hidden smDown>
+                <Typography type="title" color="inherit" className={classes.flex}>
+                  <Logo />
+                </Typography>
+                <Button className={classes.button} color="contrast">
+                  <AccessibilityIcon className={classes.leftIcon} />
+                  Ser Anfitrion
+                </Button>
+                <Button className={classes.button} color="contrast">
+                  <SearchIcon className={classes.leftIcon} />
+                  Encontrar Cuidador
+                </Button>
+                <Button className={classes.button} color="contrast">
+                  <AccountCircle className={classes.leftIcon} />
+                  Ingresar
+                </Button>
+              </Hidden>
+            </Toolbar>
+          </AppBar>
     );
   }
 }

@@ -80,7 +80,7 @@ class SearchForm extends Component {
     const { selectedDateIn, selectedDateOut } = this.state;
 
     return (
-      <Grid container justify="center">
+      <Grid container spacing={0} justify="center">
         <Grid item xs={12} md={8}>
           <Card style={{margin: 30}}>
             <CardContent style={{ textAlign: "center" }}>
