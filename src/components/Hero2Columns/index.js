@@ -6,8 +6,8 @@ import Button from 'material-ui/Button';
 
 const styles = theme => ({
   root: {
-    paddingTop: '3rem',
-    paddingBottom: '3rem',
+    paddingTop: '4rem',
+    paddingBottom: '4rem',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',

@@ -11,6 +11,7 @@ import AccessibilityIcon from 'material-ui-icons/Accessibility';
 import Hidden from 'material-ui/Hidden';
 import Logo from '../Logo/';
 import MenuA from '../MenuA/';
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   flex: {
@@ -45,15 +46,34 @@ class Header extends Component {
             <Toolbar>
               <Hidden mdUp>
                 <MenuA />
-                <Typography color="inherit" className={classes.flex} align="right">
+                <Typography
+                  color="inherit"
+                  className={classes.flex}
+                  align="right"
+                  component={Link}
+                  to='/'
+                  style={{ textDecoration: 'none' }}
+                >
                   <Logo />
                 </Typography>
               </Hidden>
               <Hidden smDown>
-                <Typography type="title" color="inherit" className={classes.flex}>
+                <Typography
+                  type="title"
+                  color="inherit"
+                  className={classes.flex}
+                  component={Link}
+                  to='/'
+                  style={{ textDecoration: 'none' }}
+                >
                   <Logo />
                 </Typography>
-                <Button className={classes.button} color="contrast">
+                <Button
+                  className={classes.button}
+                  color="contrast"
+                  component={Link}
+                  to='/hostes'
+                >
                   <AccessibilityIcon className={classes.leftIcon} />
                   Ser Anfitrion
                 </Button>

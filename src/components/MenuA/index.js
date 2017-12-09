@@ -11,6 +11,7 @@ import Paper from 'material-ui/Paper';
 import { withStyles } from 'material-ui/styles';
 import { Manager, Target, Popper } from 'react-popper';
 import ClickAwayListener from 'material-ui/utils/ClickAwayListener';
+import { Link } from 'react-router-dom';
 
 const styles = {
   root: {
@@ -63,7 +64,11 @@ class MenuA extends React.Component {
                       <SearchIcon className={classes.leftIcon} />
                       Encontrar Cuidador
                     </MenuItem>
-                    <MenuItem onClick={this.handleRequestClose}>
+                    <MenuItem
+                      onClick={this.handleRequestClose}
+                      component={Link}
+                      to='/hostes'
+                    >
                       <AccessibilityIcon className={classes.leftIcon} />
                       Ser Anfitrion
                     </MenuItem>
